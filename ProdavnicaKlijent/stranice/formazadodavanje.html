@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma za dodavanje proizvoda</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Staatliches', cursive;
+        }
+
+        body {
+            background-color: #33007b;
+            font-size: 25px;
+            align-items: center;
+            min-height: 80vh;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: black;
+            color: #fdb827;
+            text-transform: uppercase;
+            padding: 30px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            letter-spacing: 2px;
+            overflow: hidden;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 0px;
+        }
+
+        nav div:hover>.linija {
+            width: 100%;
+            transition: 0.3s ease-out;
+        }
+
+        .linija {
+            width: 0;
+            border-bottom: 2px solid #fdb827;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .centriraj {
+            text-align: center;
+        }
+
+        input {
+            width: 500px;
+        }
+
+        span {
+            font-size: 15px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        select {
+            width: 310px;
+        }
+
+        .kartica {
+            box-shadow: 5px 0 15px 5px gray;
+            border-radius: 5px;
+            border: 1px solid gray;
+            text-align: center;
+            width: 600px;
+            padding: 10px;
+            margin: 25px auto;
+        }
+
+        button {
+            background: white;
+            color: black;
+            border: none;
+            width: 200px;
+        }
+
+        button:hover {
+            color: #fdb827;
+            border: 2px solid #fdb827;
+            border-radius: 5px;
+        }
+
+        .src {
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid black;
+            color: black;
+        }
+
+        .src:hover {
+            border: 1px solid #fdb827;
+            transition: 0.2s ease-in;
+        }
+        input{
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        input:hover{
+            border: 2px solid #fdb827;
+        }
+        .popust{
+            width: 13%;
+        }
+        #dodaj{
+            background-color: black;
+            border-radius: 5px;
+            border: 1px solid black;
+            color: white;
+            height: 25px;
+        }
+        #dodaj:hover{
+            color: #fdb827;
+        border: 1px solid #fdb827;
+        transition: 0.2s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="margin-bottom: 30px">
+        <div><a href="/">Pocetna</a>
+            <div class="linija"></div>
+        </div>
+        <div><a href="/sviproizvodi">Proizvodi</a>
+            <div class="linija"></div>
+        </div>
+        <div><a href="/dodajproizvod">Dodaj proizvod</a>
+            <div class="linija"></div>
+    </nav>
+    <form action="/snimiproizvod" method="post" class="centriraj" class="kartica">
+        <input type="text" class = "src" name="tekstProizvoda" placeholder="    Unesite ime proizvoda...">
+        <br>
+        <input type="text" class = "src" name="cena" placeholder="  Unesite cenu proizvoda...">
+        <br>
+        <div>
+            <span style="color: white; font-size: 20px;margin-bottom: 10px;">Izaberite kategoriju:</span>
+            <select name="kategorijaProizvoda" id="kategorijaProizvoda" class = "src">
+                <option value="laptopovi">Laptopovi</option>
+                <option value="stolice">Stolice</option>
+                <option value="tastature">Tastature</option>
+            </select>
+        </div>
+        <input type="text" class = "src" name="oznaka" placeholder="    Unesite oznake za proizvod...">
+        <br>
+        <input type="text" class = "src popust" name="vrednostPopusta" placeholder="   Unesite vrednost popusta...">
+        <input type="text" class = "src popust" name="datumIsteka" placeholder="   Unesite datum isteka popusta...">
+        <div><button type="submit" id="dodaj" class = "src">Dodaj proizvod</button></div>
+    </form>
+</body>
+
+</html>

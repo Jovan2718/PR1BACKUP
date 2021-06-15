@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proizvodi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Staatliches', cursive;
+        }
+
+        body {
+            background-color: #33007b;
+            font-size: 25px;
+            align-items: center;
+            min-height: 80vh;
+            justify-content: center;
+        }
+        nav{
+            background-color: black;
+            color: #fdb827;
+            text-transform: uppercase;
+            padding: 30px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        nav a{
+            color: white;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            letter-spacing: 2px;
+            overflow: hidden;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 0px;
+        }
+        nav div{
+            display: block;
+            padding-bottom: 0px;
+        }
+        nav div:hover>.linija{
+            width: 100%;
+    transition: 0.3s ease-out;
+        }
+        .linija{
+    width: 0;
+    border-bottom: 2px solid #fdb827;
+    margin: 0px;
+    padding: 0px;
+        }
+    .kartica{
+        box-shadow: 0px 0px 20px 5px #fdb827;
+        border-radius: 5px;
+        border: 1px solid black;
+        text-align: center;
+        width: 30%;
+        margin: 25px 30px;
+        background-color: black;
+        color: white;
+        float: left;
+    }
+    .kartica1{
+        box-shadow: 0px 0px 20px 5px #fdb827;
+        border-radius: 5px;
+        border: 1px solid black;
+        text-align: center;
+        width: 30%;
+        margin: 25px auto;
+        background-color: black;
+        color: white;
+        display: block;
+    }
+    #sveKartice{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .pretraga{
+        margin-top: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .filtriranje{
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .dugme{
+        background: #33007b;
+    }
+    .dugme1{
+        color: white;
+    }
+    #obrisi{
+       justify-content: center;
+    }
+    #update{
+        justify-content: center;
+    }
+    .detaljnije:hover{
+        background: #fdb827;
+        transition: 0.5s ease-in;
+    }
+    #detaljnije{
+        color: white;
+    }
+    #detaljnije:hover{
+        color: black;
+        transition: 0.5s ease-in;
+    }
+    .dugme1:hover{
+        color: #fdb827;
+        transition: 0.5s ease-in;
+    }
+    button {
+            background: white;
+            color: black;
+            border: none;
+            width: 100px;
+            margin-top: 5px;
+            height: 30px;
+        }
+
+        button:hover {
+            color: #fdb827;
+            border: 2px solid #fdb827;
+            border-radius: 5px;
+        }
+    .src{
+        background-color: black;
+        border-radius: 5px;
+        border: 1px solid black;
+        color: white;
+    }
+    .src:hover{
+        color: #fdb827;
+        border: 1px solid #fdb827;
+        transition: 0.2s ease-in;
+    }
+    input{
+        margin-bottom: 10px;
+        border: 1px solid black;
+        width: 175px;
+        height: 30px;
+    }
+    #pretragatekst{
+        vertical-align:middle;
+    }
+
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+       <div ><a href="/">Pocetna</a><div class="linija"></div></div>
+        <div ><a href="/sviproizvodi">Proizvodi</a><div class="linija"></div></div>
+        <div><a href="/dodajproizvod">Dodaj proizvod</a><div class="linija"></div>
+    </nav>
+    <div class="pretraga">
+        <form action="/filtrirajproizvodzaoznaku" method="POST">
+            <label style="color: white;" id="pretragatekst">Pretraga</label> 
+            <input type="text" name="oznaka">
+            <button type="submit" class="src">Pretrazi</button>
+        </form>
+    </div>
+    <div class="filtriranje">
+        <form action="/filtrirajproizvodzakategoriju" method="POST">
+            <select name="kategorijaProizvoda" class="src">
+                <option value="laptopovi">Laptopovi</option>
+                <option value="stolice">Stolice</option>
+                <option value="tastature">Tastature</option>
+            </select>
+            <button type="submit" class = "src">Filtriraj</button>
+        </form>
+    </div>
+    <table>
+        <div id="sveKartice">
+            #{data}
+        </div>
+    </table>
+</body>
+</html>

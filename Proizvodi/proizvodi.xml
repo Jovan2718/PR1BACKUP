@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Prodavnica SYSTEM "proizvodi.dtd">
+<Prodavnica>
+  <Proizvod>   
+    <KategorijaProizvoda tip="Laptop"></KategorijaProizvoda>
+    <KategorijaProizvoda tip = "Gaming"></KategorijaProizvoda>
+    <Cena valuta="rsd">360000</Cena>
+    <TekstProizvoda>ASUS ROG Zephyrus</TekstProizvoda>
+    <oznake>
+      <Oznaka>Asus</Oznaka>
+      <Oznaka>Laptop</Oznaka>
+      <Oznaka>Zephyrus</Oznaka>
+      <Oznaka>ROG</Oznaka>
+    </oznake>
+    <Akcija cena="298990" datumIsteka="2021-4-27"></Akcija>
+  </Proizvod>
+  <Proizvod>
+    <KategorijaProizvoda tip="Monitor"></KategorijaProizvoda>
+    <KategorijaProizvoda tip = "Gaming"></KategorijaProizvoda>
+    <Cena valuta="rsd">40000</Cena>
+    <TekstProizvoda>Benq Zowie XL2731 27 inch 144 Hz</TekstProizvoda>
+    <oznake>
+    <Oznaka>Benq</Oznaka>
+    <Oznaka>Zowie</Oznaka>
+    <Oznaka>27 inch</Oznaka>
+    <Oznaka>144hz</Oznaka>
+    </oznake>
+    <Akcija cena="35000" datumIsteka="2021-4-29"></Akcija>
+  </Proizvod>
+  <Proizvod>
+    <KategorijaProizvoda tip="Mis"></KategorijaProizvoda>
+    <KategorijaProizvoda tip = "Gaming"></KategorijaProizvoda>
+    <Cena valuta="rsd">12990</Cena>
+    <TekstProizvoda>LOGITECH Gejmerski miš G502 HERO</TekstProizvoda>
+    <oznake>
+    <Oznaka>G502</Oznaka>
+    <Oznaka>Gaming</Oznaka>
+    <Oznaka>Mis</Oznaka>
+    <Oznaka>Logitech</Oznaka>
+    </oznake>
+    <Akcija cena="9990" datumIsteka="2021-5-1"></Akcija>
+  </Proizvod>
+  <Proizvod>
+    <KategorijaProizvoda tip="Tastatura"></KategorijaProizvoda>
+    <KategorijaProizvoda tip = "Gaming"></KategorijaProizvoda>
+    <Cena valuta="rsd">10000</Cena>
+    <TekstProizvoda>Tastatura Corsair K55 RGB</TekstProizvoda>
+    <oznake>
+    <Oznaka>Tastatura</Oznaka>
+    <Oznaka>Corsair</Oznaka>
+    <Oznaka>K55</Oznaka>
+    </oznake>
+    <Akcija cena="8550" datumIsteka="2021-4-27"></Akcija>
+  </Proizvod>
+  <Proizvod>
+    <KategorijaProizvoda tip="Slusalice"></KategorijaProizvoda>
+    <KategorijaProizvoda tip = "Studio"></KategorijaProizvoda>
+    <Cena valuta="rsd">14990</Cena>
+    <TekstProizvoda>HYPERX gejmerske slušalice CLOUD ALPHA PRO </TekstProizvoda>
+  <oznake>
+    <Oznaka>Slusalice</Oznaka>
+    <Oznaka>HYPERX</Oznaka>
+    <Oznaka>CLOUD ALPHA</Oznaka>
+    <Oznaka>Gaming</Oznaka>
+  </oznake>
+    <Akcija cena="8550" datumIsteka="2021-4-27"></Akcija>
+  </Proizvod>
+  <Proizvod>
+    <KategorijaProizvoda tip="Stolica"></KategorijaProizvoda>
+    <KategorijaProizvoda tip = "Work"></KategorijaProizvoda>
+    <Cena valuta="rsd">49999</Cena>
+    <TekstProizvoda>Gejmerska stolica eShark ESL-GC2 Takamikura</TekstProizvoda>
+    <oznake>
+    <Oznaka>Stolica</Oznaka>
+    <Oznaka>eShark</Oznaka>
+    <Oznaka>Takamikura</Oznaka>
+    <Oznaka>Gaming</Oznaka>
+    </oznake>
+    <Akcija cena="34990" datumIsteka="2021-4-30"></Akcija>
+  </Proizvod>
+</Prodavnica>

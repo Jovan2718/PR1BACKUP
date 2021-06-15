@@ -1,0 +1,61 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Prodavnica" type="ProdavnicaType"/>
+  <xs:complexType name="KategorijaProizvodaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="tip" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+ 
+  <xs:simpleType name="minCena">
+      <xs:restriction base="xs:float"> 
+          <xs:minInclusive value="0"></xs:minInclusive>
+      </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="CenaType">
+    <xs:simpleContent>
+        <xs:extension base="minCena">
+            <xs:attribute type="xs:string" name="valuta" use="optional"/>
+        </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="AkcijaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:int" name="cena" use="optional"/>
+        <xs:attribute type="xs:string" name="datumIsteka" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ProizvodType">
+    <xs:sequence>
+      <xs:element type="KategorijaProizvodaType" name="KategorijaProizvoda"/>
+      <xs:element type="CenaType" name="Cena"/>
+      <xs:element name="TekstProizvoda">
+          <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:minLength value="10"/>
+                <xs:maxLength value="180"/>
+              </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="oznake">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Oznaka" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+      <xs:element type="xs:string" name="Oznaka" maxOccurs="5" minOccurs="0"/>
+      <xs:element type="AkcijaType" name="Akcija"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProdavnicaType">
+    <xs:sequence>
+      <xs:element type="ProizvodType" name="Proizvod" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
